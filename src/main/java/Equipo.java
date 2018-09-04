@@ -19,17 +19,19 @@ public class Equipo {
 
     public int getTotalPersonas() {
         //Todo: Implement me
-        return 1;
+        //Tengo que hacer un count del array personas, y devolver la cantidad
+        return this.personas.size();
     }
 
     public List<Seniority> getSeniorities() {
         //TODO: Implement me
-        return null;
+        //Devolver la lista de los seniorities que vienen dentro del array personas
+        return this.personas.stream().map(Persona::getSeniority).distinct().collect(Collectors.toList());
     }
 
     public List<Persona> getPersonaBySeniority(Seniority semisenior) {
         //TODO: Implement me
-        System.out.println(semisenior);
+        //Filtrar del array el seniority especificado
         return this.personas.stream().filter(persona -> persona.getSeniority().equals(semisenior)).collect(Collectors.toList());
 
     }

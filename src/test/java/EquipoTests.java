@@ -39,14 +39,6 @@ public class EquipoTests {
                 Seniority.SEMISENIOR,
                 200);
 
-        qa = new QA(
-                4,
-                "Lola",
-                "Mora",
-                "QA",
-                Seniority.JUNIOR,
-                100);
-
     }
 
     @Test
@@ -55,10 +47,10 @@ public class EquipoTests {
         Assert.assertEquals(1, equipo.getTotalPersonas());
 
         equipo.agregarPersona(anotherDeveloper);
-        Assert.assertEquals(1, equipo.getTotalPersonas());
+        Assert.assertEquals(2, equipo.getTotalPersonas());
 
         equipo.agregarPersona(qa);
-        Assert.assertEquals(2, equipo.getTotalPersonas());
+        Assert.assertEquals(3, equipo.getTotalPersonas());
     }
 
     @Test
@@ -76,6 +68,6 @@ public class EquipoTests {
         equipo.agregarPersona(qa);
         equipo.agregarPersona(anotherDeveloper);
         List<Persona> listOfPersonas = equipo.getPersonaBySeniority(Seniority.SEMISENIOR);
-        Assert.assertEquals(2, listOfPersonas);
+        Assert.assertEquals(2, listOfPersonas.size());
     }
 }
