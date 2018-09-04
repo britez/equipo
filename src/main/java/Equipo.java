@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class Equipo {
+public class  Equipo {
 
     //TODO: Private? Public? Proteced? Package?
     ArrayList<Persona> personas = new ArrayList<>();

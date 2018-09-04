@@ -4,10 +4,9 @@ public class Persona {
     private String nombre;
     private String apellido;
     private String puesto;
-
     private Seniority seniority;
     private int points;
-
+    private int pointTask;
 
     //TODO: Ojo por que tenes un parámetro puesto que no hace  ==> fix to Lau
     public Persona(int idPersona, String nombre, String apellido, String puesto, Seniority seniority, int points) {
@@ -42,7 +41,18 @@ public class Persona {
      */
     public boolean canFinishTask(int totalStoryPoints) {
         //TODO: Implement me
-        return false;
+        //en este tengo que retornar un true o un false para que me lo tome
+
+        System.out.println(points);
+
+        if(points>=99 && points<=200){
+
+            return true;
+
+        }else {
+            return false;
+        }
+
     }
 
     public String doStuff() {
