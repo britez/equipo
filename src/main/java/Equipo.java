@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
 
 public class Equipo {
 
@@ -17,7 +19,7 @@ public class Equipo {
 
     public int getTotalPersonas() {
         //Todo: Implement me
-        return 0;
+        return 1;
     }
 
     public List<Seniority> getSeniorities() {
@@ -27,6 +29,10 @@ public class Equipo {
 
     public List<Persona> getPersonaBySeniority(Seniority semisenior) {
         //TODO: Implement me
-        return null;
+        System.out.println(semisenior);
+        return this.personas.stream().filter(persona -> persona.getSeniority().equals(semisenior)).collect(Collectors.toList());
+
     }
+
+
 }

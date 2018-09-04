@@ -28,7 +28,7 @@ public class PersonaTests {
         Persona persona = new Developer(1, "A", "B", "LALA", Seniority.JUNIOR, 10);
         Assert.assertEquals("I'm developer! I'm coding!", persona.doStuff());
 
-        Persona persona1 = new QA(1, "C", "C", "LALA", "LALA", 10);
+        Persona persona1 = new QA(2, "Yanina", "Torres", "QA", Seniority.SENIOR, 200);
         Assert.assertEquals("I'm QA! I'm finding bugs!", persona1.doStuff());
     }
 }

@@ -30,13 +30,22 @@ public class EquipoTests {
                 Seniority.SEMISENIOR,
                 100);
 
-        //TODO: Fix me
-        qa = new QA(2,
+        //TODO: Fix me - LAU: todo
+        qa = new QA(
+                2,
                 "Yanina",
                 "Torres",
                 "QA",
-                "LALA",
+                Seniority.SEMISENIOR,
                 200);
+
+        qa = new QA(
+                4,
+                "Lola",
+                "Mora",
+                "QA",
+                Seniority.JUNIOR,
+                100);
 
     }
 
@@ -45,7 +54,7 @@ public class EquipoTests {
         equipo.agregarPersona(developer);
         Assert.assertEquals(1, equipo.getTotalPersonas());
 
-        equipo.agregarPersona(developer);
+        equipo.agregarPersona(anotherDeveloper);
         Assert.assertEquals(1, equipo.getTotalPersonas());
 
         equipo.agregarPersona(qa);
