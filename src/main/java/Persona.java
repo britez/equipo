@@ -1,22 +1,27 @@
 public class Persona {
 
+
     private int idPersona;
     private String nombre;
     private String apellido;
     private String puesto;
     private Seniority seniority;
     private int points;
-    private int pointTask;
+
 
     //TODO: Ojo por que tenes un parámetro puesto que no hace  ==> fix to Lau
     public Persona(int idPersona, String nombre, String apellido, String puesto, Seniority seniority, int points) {
+
         this.idPersona = idPersona;
         this.nombre = nombre;
         this.apellido = apellido;
         this.puesto = puesto;
         this.seniority = seniority;
         this.points = points;
+
+
     }
+
 
 
     public Seniority getSeniority() {
@@ -28,11 +33,6 @@ public class Persona {
     }
 
 
-    @Override
-    public String toString(){
-        return this.nombre + " " + this.apellido;
-    }
-
     /**
      * Una persona puede terminar una tarea si con su seniority
      * no supera la cantidad máxima de story points permitidos
@@ -40,25 +40,14 @@ public class Persona {
      * @return
      */
     public boolean canFinishTask(int totalStoryPoints) {
-        //TODO: Implement me
-        //en este tengo que retornar un true o un false para que me lo tome
-
-        System.out.println(points);
-
-        if(points>=99 && points<=200){
-
-            return true;
-
-        }else {
-            return false;
-        }
-
+        //TODO: Implement me => TODO
+        return totalStoryPoints==Persona.this.points;
     }
 
     public String doStuff() {
         //TODO: Implement me
         //si es un developer debe devolver un string y si es un qa debe otro
-        if (puesto == "Developer"){
+       if (puesto == "Developer"){
             return "I'm developer! I'm coding!";
         }
         else {
