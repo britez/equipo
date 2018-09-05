@@ -15,7 +15,7 @@ public class ProjectTests {
 
     @Test
     public void testHasTeam() {
-        Assert.assertFalse(project.hasTeam());
+        Assert.assertTrue(project.hasTeam(equipo));
     }
 
     @Test

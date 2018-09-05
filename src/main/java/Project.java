@@ -1,14 +1,24 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Project {
 
-    public boolean hasTeam() {
-        //TODO: implement me
+    ArrayList<Equipo> equipos = new ArrayList<>();
+
+    public boolean hasTeam(Equipo e) {
+        //TODO: implement me => LAU TODO
+        equipos.add(e);
         return true;
     }
 
-    public void addSprint(Sprint sp1) {
+    ArrayList<Sprint> sprints = new ArrayList<>();
+
+    public int addSprint(Sprint sp1) {
         //TODO: implement me
+
+
+        System.out.println(sp1);
+        return 1;
     }
 
     public List<Sprint> getSprints() {
