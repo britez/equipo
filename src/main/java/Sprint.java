@@ -1,7 +1,7 @@
 public class Sprint {
     public Integer getStoryPoints() {
         //TODO: Implement me
-        return 0;
+        return null;
     }
 
     public Integer getBugsStoryPoints() {

@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class  Equipo  extends Project{
 
     //TODO: Private? Public? Proteced? Package?
-    ArrayList<Persona> personas = new ArrayList<>();
+    private ArrayList<Persona> personas = new ArrayList<>();
 
     public void agregarPersona(Persona p){
         personas.add(p);

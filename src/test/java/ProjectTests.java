@@ -11,10 +11,16 @@ public class ProjectTests {
     @Before
     public void setup() {
         this.project = new Project();
+        this.equipo = new Equipo();
+
+        this.sp1 = new Sprint();
     }
+
+
 
     @Test
     public void testHasTeam() {
+        this.project.setTeam(equipo);
         Assert.assertTrue(project.hasTeam(equipo));
     }
 
@@ -24,18 +30,16 @@ public class ProjectTests {
         Assert.assertEquals(1, project.getSprints().size());
 
         this.project.addSprint(sp1);
-        Assert.assertEquals(1, this.project.getSprints());
+        Assert.assertEquals(1, this.project.getSprints().size());
     }
 
     @Test
     public void testCanFinishProject() {
-        Assert.assertFalse(this.project.canFinish());
-        
-        this.project.setTeam(equipo);
+
         Assert.assertFalse(this.project.canFinish());
 
+        this.project.setTeam(equipo);
         this.project.addSprint(sp1);
-        Assert.assertFalse(this.project.canFinish());
 
         Developer anotherDeveloper = new Developer(
                 2, "Laura", "Carelli",
