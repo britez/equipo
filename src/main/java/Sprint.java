@@ -1,7 +1,19 @@
+import java.util.ArrayList;
+
 public class Sprint {
+
+    private int storyPoints;
+
+    public Sprint(){
+        this.storyPoints = 300;
+    }
+
+
+
+
     public Integer getStoryPoints() {
-        //TODO: Implement me
-        return null;
+        //TODO: Implement me => LAU
+        return storyPoints;
     }
 
     public Integer getBugsStoryPoints() {

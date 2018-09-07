@@ -1,5 +1,11 @@
 public class ScrumMaster extends Persona {
-    public ScrumMaster(int idPersona, String nombre, String apellido, String puesto, Seniority seniority, int points) {
-        super(idPersona, nombre, apellido, puesto, seniority, points);
+
+    public ScrumMaster(int idPersona, String nombre, String apellido, Seniority seniority) {
+        super(idPersona, nombre, apellido, seniority);
+    }
+
+    @Override
+    public String doStuff() {
+        return "I'm SM";
     }
 }

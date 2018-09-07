@@ -6,6 +6,7 @@ public class SprintTests {
 
     private Sprint sprint;
 
+
     @Before
     public void setup() {
         this.sprint = new Sprint();

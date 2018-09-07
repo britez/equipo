@@ -12,7 +12,6 @@ public class ProjectTests {
     public void setup() {
         this.project = new Project();
         this.equipo = new Equipo();
-
         this.sp1 = new Sprint();
     }
 
@@ -42,8 +41,7 @@ public class ProjectTests {
         this.project.addSprint(sp1);
 
         Developer anotherDeveloper = new Developer(
-                2, "Laura", "Carelli",
-                "Developer", Seniority.SENIOR, 200);
+                2, "Laura", "Carelli", Seniority.SENIOR);
 
         this.equipo.agregarPersona(anotherDeveloper);
         Assert.assertTrue(this.project.canFinish());

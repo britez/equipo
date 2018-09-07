@@ -1,8 +1,8 @@
 public enum Seniority {
 
-    JUNIOR(10),
-    SEMISENIOR(20),
-    SENIOR(30);
+    JUNIOR(100),
+    SEMISENIOR(200),
+    SENIOR(300);
 
     //Atributo de cada elemento de una anumeracion
     private final int points;

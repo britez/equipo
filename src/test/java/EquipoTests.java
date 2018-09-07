@@ -14,30 +14,27 @@ public class EquipoTests {
     @Before
     public void setup() {
         equipo = new Equipo();
+
         developer = new Developer(
             1,
             "Julian",
             "Avaca",
-            "Developer",
-            Seniority.JUNIOR,
-            10);
+            Seniority.JUNIOR
+        );
 
         anotherDeveloper = new Developer(
                 1,
                 "Gisela",
                 "Lopes",
-                "Developer",
-                Seniority.SEMISENIOR,
-                100);
+                Seniority.SEMISENIOR
+        );
 
-        //TODO: Fix me - LAU: todo
         qa = new QA(
                 2,
                 "Yanina",
                 "Torres",
-                "QA",
-                Seniority.SEMISENIOR,
-                200);
+                Seniority.SEMISENIOR
+        );
 
     }
 
